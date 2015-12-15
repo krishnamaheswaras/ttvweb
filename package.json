@@ -1,0 +1,11 @@
+{
+  "name": "thetechvolks",
+  "version": "1.0.0",
+  "description": "Technology powered by people",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "K M Siva Kumar",
+  "license": "ISC"
+}

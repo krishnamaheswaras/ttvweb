@@ -1,0 +1,21 @@
+{
+  "name": "thetechvolks",
+  "version": "1.0.9",
+  "authors": [
+    "sivakumar <siva.php5@gmail.com>"
+  ],
+  "description": "Technology Powered By People",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}
