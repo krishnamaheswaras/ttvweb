@@ -13,7 +13,7 @@ var path = require('path'),
 module.exports = function(env) {
     var main = {
         application: {
-            root_path: path.join('E:','siva','techvolks'),
+            root_path: path.join('F:','Works','ttvweb'),
             addPrefixes: process.argv[2],
             logFilenamePrefix: "",
             modelNamePrefix: "",
@@ -43,4 +43,4 @@ module.exports = function(env) {
         tech_volks_app_root: path.join('/', 'root', 'siva', 'techvolks', 'app'),
     }
     return _.extend(main, (env == 'dev') ? dev : prod);
-}()
+}();

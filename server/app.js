@@ -1,9 +1,9 @@
 var express = require('express'),
-    config  = require('config/config.js'),
+    config  = require('./config/config.js'),
     app 	= new express();
 
-app.use(express.static(__dirname+ '../app'));
+app.use(express.static(config.application.root_path+ '/app'));
 
-app.listen(3000);
-console.log(__dirname);
-console.log("App is listening on port 3000");
+app.listen(config.application.http_port);
+
+console.log("App is listening on port "+config.application.http_port);
