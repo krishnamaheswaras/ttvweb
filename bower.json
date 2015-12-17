@@ -19,7 +19,7 @@
   "dependencies": {
     "angular": "https://github.com/angular/bower-angular.git#~1.4.8",
     "material": "https://github.com/angular/material.git#~1.0.0",
-    "angular-ui-router": "https://github.com/angular-ui/ui-router.git#~0.2.15",
+    "angular-ui-router": "~0.2.15",
     "angular-material": "master"
   }
 }
