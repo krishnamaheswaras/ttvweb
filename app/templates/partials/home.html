@@ -1,1 +1,11 @@
-Hey , this is home
+  <md-list>
+      <md-list-item class="md-3-line" ng-repeat="item in todos">
+        <img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
+        <div class="md-list-item-text" layout="column">
+          <h3>{{ item.who }}</h3>
+          <h4>{{ item.what }}</h4>
+          <p>{{ item.notes }}</p>
+        </div>
+      </md-list-item>
+      <md-divider ></md-divider>
+    </md-list>

@@ -1,34 +1,72 @@
-<!doctype html>
-<html lang="en" ng-app="techvolksApp">
-<head>
-  <title>Welcome to TechVolks - Home</title>
-  <link rel="favicon" href="images/favicon.png">
-  <!-- Angular Material style sheet -->
-  <link rel="stylesheet" href="external/angular-material/angular-material.min.css">
-  <link rel="stylesheet" href="styles/style.css">
-</head>
-<body>
+<!DOCTYPE html>
+<html lang="en" ng-app="techvolksApp" >
+  <head>
+    <title>The Tech Volks -App</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <link rel="stylesheet" href="/external/angular-material/angular-material.css"/>
+    <link rel="stylesheet" href="styles/style.css"/>
+
+    <style type="text/css">
+        /**
+         * Hide when Angular is not yet loaded and initialized
+         */
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+          display: none !important;
+        }
+    </style>
+
+  </head>
+
+  <body  layout="row"  ng-cloak >
+
+  <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
+                md-component-id="left"
+                md-is-locked-open="$mdMedia('gt-sm')">
+
+    <md-toolbar class="md-whiteframe-z1 toolBar">
+      <h1>The Tech Volks</h1>
+    </md-toolbar>
+
+    <md-list>
+      <md-list-item ng-repeat="it in menuList">
+          <md-button  ng-class="{'selected' : it === selected }">
+            <md-icon md-svg-icon="{{it.avatar}}"></md-icon>
+            {{it.name}}
+          </md-button>
+      </md-list-item>
+    </md-list>
+
+  </md-sidenav>
 
 
-  <div ui-view></div>
+  <div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2">
 
-  
-  <!-- Angular Material requires Angular.js Libraries -->
-  <script src="external/angular/angular.min.js"></script>
+    <md-toolbar layout="row" class="md-whiteframe-z1 toolBar">
+      <md-button class="menu" hide-gt-sm ng-click="toggleList()" aria-label="Show User List">
+        <md-icon md-svg-icon="menu" ></md-icon>
+      </md-button>
+      <h1>Angular Material - Starter App</h1>
+    </md-toolbar>
 
-  <!-- Angular js Angular ui router -->
-  <script src="external/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <md-content flex id="content" ui-view>
+        
+    </md-content>
 
-  <!-- Angular material dependicies -->
-  <script src="external/angular-animate/angular-animate.min.js"></script>
-  <script src="external/angular-aria/angular-aria.min.js"></script>
-  <script src="external/angular-messages/angular-messages.min.js"></script>
+  </div>
 
-  <!-- Angular Material Library -->
-  <script src="external/angular-material/angular-material.min.js"></script>
-  <script src="scripts/app.js"></script>
-  <script src="scripts/controllers/homeController.js"></script>
+    <script src="/external/angular/angular.js"></script>
+    <script src="/external/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/external/angular-animate/angular-animate.min.js"></script>
+    <script src="/external/angular-aria/angular-aria.min.js"></script>
+    <script src="/external/angular-material/angular-material.min.js"></script>
 
-  
-</body>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/controllers/homeController.js"></script>
+
+  </body>
 </html>
